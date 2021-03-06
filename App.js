@@ -2,7 +2,6 @@ import React from "react";
 import { Image, StyleSheet } from "react-native";
 
 import Screen from "./app/components/Screen";
-// import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 const App = () => {
   return (
