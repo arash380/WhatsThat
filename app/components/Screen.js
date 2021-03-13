@@ -1,25 +1,26 @@
 import React from "react";
-import { Dimensions, Image, SafeAreaView, StyleSheet } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Dimensions, StyleSheet, Platform, View } from "react-native";
 import Constants from "expo-constants";
 
 const Screen = ({ children, style }) => {
   return (
-    <SafeAreaView style={[styles.container, style]}>
-      <Image
-        style={styles.backgroundImage}
-        source={require("../assets/background.png")}
+    <View style={[styles.container, style]}>
+      <LinearGradient
+        colors={["#FF1B1B", "#FF858A"]}
+        style={styles.backgroundColor}
       />
       {children}
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Constants.statusBarHeight,
+    paddingTop: Constants.statusBarHeight + (Platform.OS === "ios" ? 20 : 0),
     flex: 1,
   },
-  backgroundImage: {
+  backgroundColor: {
     width: "100%",
     height: Dimensions.get("screen").height,
     position: "absolute",

@@ -7,18 +7,27 @@ import {
 } from "react-native";
 import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
 
-import Screen from "../components/Screen";
 import colors from "../config/colors";
+import Currency from "../components/Currency";
+import routes from "../navigation/routes";
+import Screen from "../components/Screen";
+import Star from "../components/Star";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <Screen style={styles.container}>
+      <View style={styles.topContainer}>
+        <Star />
+        <Currency />
+      </View>
       <Image style={styles.logo} source={require("../assets/logo.png")} />
-      <TouchableWithoutFeedback onPress={() => console.log("pressed")}>
+      <TouchableWithoutFeedback
+        onPress={() => navigation.navigate(routes.GAME)}
+      >
         <View style={styles.playButtonContainer}>
           <Ionicons
             name="play-sharp"
-            size={110}
+            size={130}
             color="white"
             style={styles.playIcon}
           />
@@ -47,22 +56,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    top: -40,
-    height: 370,
+    height: 380,
+    top: -25,
     resizeMode: "contain",
   },
   playButtonContainer: {
     backgroundColor: colors.tertiary,
-    top: -20,
-    height: 150,
-    width: 150,
+    height: 170,
+    width: 170,
     borderRadius: 750,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
   playIcon: {
-    left: 9,
+    left: 11,
+  },
+  topContainer: {
+    width: "90%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 
