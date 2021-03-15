@@ -1,28 +1,19 @@
-import React, { useState } from "react";
-import { StyleSheet, FlatList, Modal } from "react-native";
+import React from "react";
+import { StyleSheet, FlatList } from "react-native";
 import BackButton from "../components/BackButton";
 import BottomMenu from "../components/BottomMenu";
 import Level from "../components/Level";
 import levelsConfig from "../config/levelsConfig";
 import Screen from "../components/Screen";
 import TopMenu from "../components/TopMenu";
-import Text from "../components/Text";
+import routes from "../navigation/routes";
 
-const LevelsScreen = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [difficulty, setDifficulty] = useState("");
-  const [numOfQuestions, setNumOfQuestions] = useState(0);
-
-  const openModal = (levelDifficulty, levelQuestionNumbers) => {
-    // const getQuestions_1 = async () => {
-    //   const result = await getQuestions(10, 4, "easy");
-    //   console.log(result.data.results);
-    // };
-
-    setDifficulty(levelDifficulty);
-    setNumOfQuestions(levelQuestionNumbers);
-
-    setModalOpen(true);
+const LevelsScreen = ({ navigation }) => {
+  const openGame = (difficulty, numOfQuestions) => {
+    navigation.navigate(routes.GAME, {
+      difficulty: difficulty,
+      numOfQuestions: numOfQuestions,
+    });
   };
 
   return (
@@ -34,7 +25,7 @@ const LevelsScreen = () => {
           <Level
             difficulty={item.difficulty}
             numOfQuestions={item.numOfQuestions}
-            openModal={openModal}
+            openGame={openGame}
           >
             {item.title}
           </Level>
@@ -46,10 +37,6 @@ const LevelsScreen = () => {
       <BottomMenu>
         <BackButton />
       </BottomMenu>
-      <Modal visible={modalOpen} animationType="fade">
-        <Text>{difficulty}</Text>
-        <Text>{numOfQuestions}</Text>
-      </Modal>
     </Screen>
   );
 };

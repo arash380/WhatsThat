@@ -4,12 +4,11 @@ import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign, Entypo } from "@expo/vector-icons";
 import colors from "../config/colors";
 import Text from "./Text";
-import { getQuestions } from "../axios/questionAxios";
 
-const Level = ({ children, difficulty, numOfQuestions, openModal }) => {
+const Level = ({ children, difficulty, numOfQuestions, openGame }) => {
   return (
     <TouchableWithoutFeedback
-      onPress={() => openModal(difficulty, numOfQuestions)}
+      onPress={() => openGame(difficulty, numOfQuestions)}
     >
       <View style={styles.container}>
         <LinearGradient
