@@ -8,21 +8,18 @@ import {
 import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
-import Currency from "../components/Currency";
 import routes from "../navigation/routes";
 import Screen from "../components/Screen";
-import Star from "../components/Star";
+import TopMenu from "../components/TopMenu";
+import BottomMenu from "../components/BottomMenu";
 
 const HomeScreen = ({ navigation }) => {
   return (
     <Screen style={styles.container}>
-      <View style={styles.topContainer}>
-        <Star />
-        <Currency />
-      </View>
+      <TopMenu />
       <Image style={styles.logo} source={require("../assets/logo.png")} />
       <TouchableWithoutFeedback
-        onPress={() => navigation.navigate(routes.GAME)}
+        onPress={() => navigation.navigate(routes.LEVELS)}
       >
         <View style={styles.playButtonContainer}>
           <Ionicons
@@ -33,24 +30,15 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
       </TouchableWithoutFeedback>
-      <View style={styles.bottomContainer}>
+      <BottomMenu>
         <MaterialIcons name="leaderboard" size={50} color="darkslategray" />
         <Feather name="settings" size={50} color="darkslategray" />
-      </View>
+      </BottomMenu>
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({
-  bottomContainer: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    padding: 20,
-    bottom: 10,
-    position: "absolute",
-  },
   container: {
     display: "flex",
     alignItems: "center",
@@ -71,12 +59,6 @@ const styles = StyleSheet.create({
   },
   playIcon: {
     left: 11,
-  },
-  topContainer: {
-    width: "90%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
 });
 
