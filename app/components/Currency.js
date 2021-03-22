@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     width: 150,
     height: 35,
+    right: -5,
     borderRadius: 15,
     borderColor: colors.tertiary,
     borderWidth: 2,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     width: 150,
     height: 35,
-    display: "flex",
+    right: -5,
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",

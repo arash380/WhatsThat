@@ -40,7 +40,6 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
     alignItems: "center",
   },
   logo: {
@@ -53,7 +52,6 @@ const styles = StyleSheet.create({
     height: 170,
     width: 170,
     borderRadius: 750,
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },

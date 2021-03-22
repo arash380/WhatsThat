@@ -23,13 +23,8 @@ const GameScreen = ({ navigation, route }) => {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  },
-  testImage: {
-    height: 100,
-    resizeMode: "contain",
   },
 });
 

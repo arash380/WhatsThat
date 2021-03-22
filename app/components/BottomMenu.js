@@ -8,7 +8,6 @@ const BottomMenu = ({ children }) => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     position: "absolute",

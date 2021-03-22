@@ -1,14 +1,14 @@
 import React from "react";
 import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { AntDesign, Entypo } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import colors from "../config/colors";
 import Text from "./Text";
 
-const Level = ({ children, difficulty, numOfQuestions, openGame }) => {
+const Level = ({ children, difficulty, numOfQuestions, onPress }) => {
   return (
     <TouchableWithoutFeedback
-      onPress={() => openGame(difficulty, numOfQuestions)}
+      onPress={() => onPress(difficulty, numOfQuestions)}
     >
       <View style={styles.container}>
         <LinearGradient
@@ -34,7 +34,6 @@ const Level = ({ children, difficulty, numOfQuestions, openGame }) => {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     width: 50,
@@ -49,7 +48,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   starsContainer: {
-    display: "flex",
     flexDirection: "row",
   },
   starIcon: {

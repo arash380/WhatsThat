@@ -15,7 +15,6 @@ const TopMenu = () => {
 const styles = StyleSheet.create({
   container: {
     width: "90%",
-    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
   },

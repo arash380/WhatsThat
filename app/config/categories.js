@@ -1,102 +1,127 @@
-export default {
-  General_Knowledge: {
+export default [
+  {
     id: 9,
     displayName: "General Knowledge",
+    icon: "general-knowledge",
   },
-  Books: {
+  {
     id: 10,
     displayName: "Books",
+    icon: "books",
   },
-  Film: {
+  {
     id: 11,
     displayName: "Film",
+    icon: "film",
   },
-  Music: {
+  {
     id: 12,
     displayName: "Music",
+    icon: "music",
   },
-  Musicals_Theatres: {
+  {
     id: 13,
     displayName: "Musicals & Theatres",
+    icon: "musicals-theatre",
   },
-  Television: {
+  {
     id: 14,
     displayName: "Television",
+    icon: "television",
   },
-  Video_Games: {
+  {
     id: 15,
     displayName: "Video Games",
+    icon: "video-games",
   },
-  Board_Games: {
+  {
     id: 16,
     displayName: "Board Games",
+    icon: "board-games",
   },
-  Science_Nature: {
+  {
     id: 17,
     displayName: "Science & Nature",
+    icon: "science-nature",
   },
-  Computers: {
+  {
     id: 18,
     displayName: "Computers",
+    icon: "computer",
   },
-  Mathematics: {
+  {
     id: 19,
     displayName: "Mathematics",
+    icon: "mathematics",
   },
-  Mythology: {
+  {
     id: 20,
     displayName: "Mythology",
+    icon: "mythology",
   },
-  Sports: {
+  {
     id: 21,
     displayName: "Sports",
+    icon: "sports",
   },
-  Geography: {
+  {
     id: 22,
     displayName: "Geography",
+    icon: "geography",
   },
-  History: {
+  {
     id: 23,
     displayName: "History",
+    icon: "history",
   },
-  Politics: {
+  {
     id: 24,
     displayName: "Politics",
+    icon: "politics",
   },
-  Art: {
+  {
     id: 25,
     displayName: "Art",
+    icon: "art",
   },
-  Celebrities: {
+  {
     id: 26,
     displayName: "Celebrities",
+    icon: "celebrities",
   },
-  Animals: {
+  {
     id: 27,
     displayName: "Animals",
+    icon: "animals",
   },
-  Vehicles: {
+  {
     id: 28,
     displayName: "Vehicles",
+    icon: "vehicles",
   },
-  Comics: {
+  {
     id: 29,
     displayName: "Comics",
+    icon: "comics",
   },
-  Gadgets: {
+  {
     id: 30,
     displayName: "Gadgets",
+    icon: "gadgets",
   },
-  Japanese_Anime_Manga: {
+  {
     id: 31,
     displayName: "Japanese Anime & Manga",
+    icon: "japanese-anime-manga",
   },
-  Cartoon_Animations: {
+  {
     id: 32,
     displayName: "Cartoon & Animations",
+    icon: "cartoon-animations",
   },
-  Any: {
+  {
     id: "N/A",
     displayName: "Any",
+    icon: "any",
   },
-};
+];

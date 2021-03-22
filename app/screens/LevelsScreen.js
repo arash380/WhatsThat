@@ -9,8 +9,8 @@ import TopMenu from "../components/TopMenu";
 import routes from "../navigation/routes";
 
 const LevelsScreen = ({ navigation }) => {
-  const openGame = (difficulty, numOfQuestions) => {
-    navigation.navigate(routes.GAME, {
+  const onPress = (difficulty, numOfQuestions) => {
+    navigation.navigate(routes.CATEGORY_PICKER, {
       difficulty: difficulty,
       numOfQuestions: numOfQuestions,
     });
@@ -25,7 +25,7 @@ const LevelsScreen = ({ navigation }) => {
           <Level
             difficulty={item.difficulty}
             numOfQuestions={item.numOfQuestions}
-            openGame={openGame}
+            onPress={onPress}
           >
             {item.title}
           </Level>
@@ -43,7 +43,6 @@ const LevelsScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
     alignItems: "center",
   },
   levels: {
