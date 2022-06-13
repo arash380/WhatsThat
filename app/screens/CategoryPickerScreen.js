@@ -1,10 +1,12 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import Screen from "../components/Screen";
+import TopMenu from "../components/TopMenu";
 
 const CategoryPickerScreen = () => {
   return (
     <Screen style={styles.container}>
+      <TopMenu />
       <Image
         style={{ height: 120, resizeMode: "contain" }}
         source={require("../assets/categoryIcons/any.png")}
